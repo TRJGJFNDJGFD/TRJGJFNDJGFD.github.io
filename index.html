@@ -415,6 +415,7 @@
 
     <div class="quiz-toggle-wrap reveal">
       <button type="button" class="btn btn-secondary" id="quiz-toggle" aria-expanded="false" aria-controls="plan-quiz">🧭 לא בטוחים איזו חבילה מתאימה? בדקו ב-30 שניות</button>
+      <button type="button" class="btn btn-secondary" id="builder-toggle" aria-expanded="false" aria-controls="package-builder">🛠️ בונים חבילה בהתאמה אישית משלכם</button>
     </div>
     <div class="plan-quiz" id="plan-quiz" hidden>
       <div class="quiz-question">
@@ -463,6 +464,33 @@
       </div>
       <button type="button" class="btn btn-primary" id="quiz-submit">הצגת ההמלצה שלי</button>
       <div class="quiz-result" id="quiz-result" hidden></div>
+    </div>
+
+    <div class="plan-quiz" id="package-builder" hidden>
+      <div class="quiz-question">
+        <label>בחרו חבילת בסיס</label>
+        <div class="builder-options">
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Starter" data-price="19" checked> Starter <span class="builder-option-price">19 ₪</span></label>
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Business" data-price="39"> Business <span class="builder-option-price">39 ₪</span></label>
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Pro" data-price="59"> Pro <span class="builder-option-price">59 ₪</span></label>
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Premium" data-price="89"> Premium <span class="builder-option-price">89 ₪</span></label>
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Prime" data-price="139"> Prime <span class="builder-option-price">139 ₪</span></label>
+          <label class="builder-option"><input type="radio" name="builder-tier" value="Elite" data-price="169"> Elite <span class="builder-option-price">169 ₪</span></label>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <label>הוסיפו תוספות (אופציונלי)</label>
+        <div class="builder-options">
+          <label class="builder-option"><input type="checkbox" data-addon="store" data-price="60"> חנות אונליין + סליקת תשלומים <span class="builder-option-price">+60 ₪</span></label>
+          <label class="builder-option"><input type="checkbox" data-addon="booking" data-price="40"> מערכת הזמנות ותיאומים מתקדמת <span class="builder-option-price">+40 ₪</span></label>
+          <label class="builder-option"><input type="checkbox" data-addon="updates" data-price="25"> עדכונים שוטפים כל חודש <span class="builder-option-price">+25 ₪</span></label>
+          <label class="builder-option"><input type="checkbox" data-addon="seo" data-price="20"> SEO מתקדם <span class="builder-option-price">+20 ₪</span></label>
+          <label class="builder-option"><input type="checkbox" data-addon="pages" data-price="16"> 1-2 עמודים נוספים <span class="builder-option-price">+16 ₪</span></label>
+        </div>
+      </div>
+      <div class="builder-total" id="builder-total">סה"כ חודשי משוער: <strong>19 ₪</strong></div>
+      <button type="button" class="btn btn-primary" id="builder-submit">קבלו הצעת מחיר לפי הבחירה שלי</button>
+      <p class="builder-note">ההערכה היא לצורך התמצאות בלבד — נדייק אותה איתכם לפי הצרכים המדויקים של העסק.</p>
     </div>
 
     <div class="pricing-grid reveal-stagger reveal">
